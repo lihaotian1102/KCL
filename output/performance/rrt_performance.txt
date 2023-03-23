@@ -1,0 +1,3 @@
+The total time cost: 644s.
+The average time cost: 6s.
+The average path length: 31.134533028050004.
