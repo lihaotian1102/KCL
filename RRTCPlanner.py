@@ -129,7 +129,7 @@ class RRTConnect:
                             break
 
                         if operator.eq([new_node_2.x, new_node_2.y], [new_node_1.x, new_node_1.y]):
-                            return self.generate_final_path()
+                            return self.merge_final_path()
 
             # kind of AVL tree thought: extend the smaller node list, keep balancing.
             if len(self.node_list_1) > len(self.node_list_2):
@@ -165,7 +165,7 @@ class RRTConnect:
         return new_node
 
     # modified function (updated)
-    def generate_final_path(self):
+    def merge_final_path(self):
 
         path_1 = []
         node = self.node_list_1[-1]

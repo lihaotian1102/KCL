@@ -19,7 +19,7 @@ import time
 from scipy.spatial import distance as dist
 
 # parameter
-N_SAMPLE = 500  # the size of the random point set V
+N_SAMPLE = 1500  # the size of the random point set V, 500 to RRT, 1500 to A*
 N_KNN = 10  # Number of field points for a sample point
 MAX_EDGE_LEN = 30.0  # [m] Maximum edge length
 
@@ -181,7 +181,7 @@ def dijkstra_planning(sx, sy, gx, gy, road_map, sample_x, sample_y, came):
     while True:
         # If open_set is empty
         if not open_set:
-            print("Cannot find path")
+            print("Cannot find path!")
             path_found = False
             break
 
@@ -200,7 +200,7 @@ def dijkstra_planning(sx, sy, gx, gy, road_map, sample_x, sample_y, came):
                 came.snap()
 
         if c_id == (len(road_map) - 1):
-            print("goal is found!")
+            print("Path found!")
             goal_node.parent_index = current.parent_index
             goal_node.cost = current.cost
             break
@@ -295,7 +295,7 @@ def decimal_range(start, stop, increment):
         start += increment
 
 def main(rng=None):
-    print( " start!!")
+    print("start!!")
     fig = plt.figure(1)
 
     # came = Camera(fig)  # Use when saving motion pictures
