@@ -19,9 +19,9 @@ import time
 from scipy.spatial import distance as dist
 
 # parameter
-N_SAMPLE = 1500  # the size of the random point set V, 500 to RRT, 1500 to A*
+N_SAMPLE = 500  # the size of the random point set V, 500 to RRT, 1500 to A*
 N_KNN = 10  # Number of field points for a sample point
-MAX_EDGE_LEN = 30.0  # [m] Maximum edge length
+MAX_EDGE_LEN = 10.0  # [m] Maximum edge length
 
 show_animation = True
 
